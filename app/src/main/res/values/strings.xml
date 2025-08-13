@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Антивирус Про</string>
+    
+    <!-- Основные тексты -->
+    <string name="app_title">Антивирус Про</string>
+    <string name="app_subtitle">Защита вашего устройства</string>
+    
+    <!-- Статус защиты -->
+    <string name="protection_status">Статус защиты</string>
+    <string name="threats_count">Угроз: %d</string>
+    <string name="last_scan">Последнее сканирование: %s</string>
+    <string name="database_version">База данных: v%s</string>
+    
+    <!-- Сканирование -->
+    <string name="scanning">Сканирование</string>
+    <string name="scan_status">Сканирование... %d%%</string>
+    <string name="ready_to_scan">Готов к сканированию</string>
+    <string name="start_scan">Начать сканирование</string>
+    
+    <!-- Действия -->
+    <string name="actions">Действия</string>
+    <string name="update_database">Обновить базу данных</string>
+    <string name="settings">Настройки</string>
+    <string name="info">Информация</string>
+    
+    <!-- Сообщения -->
+    <string name="scanning_message">Выполняется сканирование...</string>
+    <string name="update_message">Обновление базы данных...</string>
+    <string name="settings_message">Настройки</string>
+    <string name="info_message">Информация о приложении</string>
+    
+    <!-- Футер -->
+    <string name="copyright">© 2024 Антивирус Про. Все права защищены.</string>
+    
+    <!-- Время -->
+    <string name="never">Никогда</string>
+</resources>
