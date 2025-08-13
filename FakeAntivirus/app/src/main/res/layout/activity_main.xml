@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Заголовок -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SHIELD PRO ANTIVIRUS"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/orange"
+            android:gravity="center"
+            android:layout_marginBottom="24dp"
+            android:fontFamily="monospace" />
+
+        <!-- Карточка статуса -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/statusCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="8dp"
+            app:cardBackgroundColor="@color/green">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="СТАТУС СИСТЕМЫ"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:id="@+id/statusText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Система защищена"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Информация об угрозах -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="8dp"
+            app:cardBackgroundColor="@color/dark_gray">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="ОБНАРУЖЕННЫЕ УГРОЗЫ"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/orange"
+                    android:gravity="center"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:id="@+id/threatCountText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Угроз: 0"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Прогресс сканирования -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="8dp"
+            app:cardBackgroundColor="@color/dark_gray">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="ПРОГРЕСС СКАНИРОВАНИЯ"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/orange"
+                    android:gravity="center"
+                    android:layout_marginBottom="16dp" />
+
+                <ProgressBar
+                    android:id="@+id/scanProgressBar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:progressTint="@color/orange"
+                    android:progressBackgroundTint="@color/light_gray"
+                    android:visibility="invisible"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:id="@+id/scanProgressText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Сканирование: 0%"
+                    android:textSize="14sp"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:visibility="invisible" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Кнопки управления -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="16dp">
+
+            <Button
+                android:id="@+id/scanButton"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="БЫСТРОЕ СКАНИРОВАНИЕ"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:background="@drawable/button_orange"
+                android:layout_marginBottom="12dp" />
+
+            <Button
+                android:id="@+id/quickScanButton"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="БЫСТРАЯ ПРОВЕРКА"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:background="@drawable/button_orange"
+                android:layout_marginBottom="12dp" />
+
+            <Button
+                android:id="@+id/fullScanButton"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="ПОЛНОЕ СКАНИРОВАНИЕ"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:background="@drawable/button_orange" />
+
+        </LinearLayout>
+
+        <!-- Информация о версии -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Версия 2.1.0 | Shield Pro Security"
+            android:textSize="12sp"
+            android:textColor="@color/light_gray"
+            android:gravity="center"
+            android:layout_marginTop="16dp" />
+
+    </LinearLayout>
+</ScrollView>
